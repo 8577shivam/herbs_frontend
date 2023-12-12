@@ -27163,17 +27163,19 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _loginpage = require("./pages/Loginpage");
 var _loginpageDefault = parcelHelpers.interopDefault(_loginpage);
+var _homePage = require("./pages/HomePage");
+var _homePageDefault = parcelHelpers.interopDefault(_homePage);
 const App = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "container h-screen",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loginpageDefault.default), {}, void 0, false, {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homePageDefault.default), {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 7,
+            lineNumber: 9,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/App.js",
-        lineNumber: 6,
+        lineNumber: 7,
         columnNumber: 5
     }, undefined);
 };
@@ -27187,7 +27189,137 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./pages/Loginpage":"bfC6m"}],"gkKU3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./pages/Loginpage":"bfC6m","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./pages/HomePage":"379Z0"}],"bfC6m":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$50d7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$50d7.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _s = $RefreshSig$();
+const Loginpage = ()=>{
+    _s();
+    const [email, setemail] = (0, _react.useState)("");
+    const [pwd, setpwd] = (0, _react.useState)("");
+    const handleLoginFromSubmit = ()=>{
+        console.log("Submitting handle form");
+    };
+    const handleEmailChange = (e)=>{
+        const em = e.target.value;
+        setemail(em);
+    };
+    const handlepwdChange = (e)=>{
+        const em = e.target.value;
+        setpwd(em);
+    };
+    //   bg-gradient-to-r from-violet-500 to-fuchsia-500
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "container   bg-[url(https://d31l02nbp0owar.cloudfront.net/m/s/23209/23199454/a-0850.jpg)] bg-no-repeat bg-cover   w-full   px-4   h-full   grid   justify-center   items-center   ",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+            className: "border-2 border-white px-4   py-4 grid gap-4",
+            onSubmit: handleLoginFromSubmit(),
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "email-container grid",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            className: "text-[white]",
+                            children: "Email"
+                        }, void 0, false, {
+                            fileName: "src/pages/Loginpage.js",
+                            lineNumber: 36,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            className: "bg-transparent border-2 border-black outline-0 text-[white] px-1",
+                            placeholder: "Enter email",
+                            value: email,
+                            type: "email",
+                            onChange: (e)=>handleEmailChange(e)
+                        }, void 0, false, {
+                            fileName: "src/pages/Loginpage.js",
+                            lineNumber: 37,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/pages/Loginpage.js",
+                    lineNumber: 35,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "pwd-container grid",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            className: "text-[white]",
+                            children: "Password"
+                        }, void 0, false, {
+                            fileName: "src/pages/Loginpage.js",
+                            lineNumber: 46,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            className: "bg-transparent border-2 border-black outline-0 text-[white] px-1",
+                            placeholder: "Enter email",
+                            value: pwd,
+                            type: "password",
+                            onChange: (e)=>handlepwdChange(e)
+                        }, void 0, false, {
+                            fileName: "src/pages/Loginpage.js",
+                            lineNumber: 47,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/pages/Loginpage.js",
+                    lineNumber: 45,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    children: "Forget Password ?"
+                }, void 0, false, {
+                    fileName: "src/pages/Loginpage.js",
+                    lineNumber: 55,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    type: "submit",
+                    className: "bg-gradient-to-r from-purple-500 to-pink-500 py-4 px-4 rounded  md:bg-gradient-to-l",
+                    children: "Login"
+                }, void 0, false, {
+                    fileName: "src/pages/Loginpage.js",
+                    lineNumber: 56,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/pages/Loginpage.js",
+            lineNumber: 30,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/pages/Loginpage.js",
+        lineNumber: 19,
+        columnNumber: 5
+    }, undefined);
+};
+_s(Loginpage, "T66br9VcwijiBXepUj4qr31CmNs=");
+_c = Loginpage;
+exports.default = Loginpage;
+var _c;
+$RefreshReg$(_c, "Loginpage");
+
+  $parcel$ReactRefreshHelpers$50d7.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -27355,11 +27487,11 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"7422ead32dcc1e6b":"786KC"}],"bfC6m":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$50d7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"7422ead32dcc1e6b":"786KC"}],"379Z0":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$52a6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$50d7.prelude(module);
+$parcel$ReactRefreshHelpers$52a6.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -27367,120 +27499,306 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _s = $RefreshSig$();
-const Loginpage = ()=>{
-    _s();
-    const [email, setemail] = (0, _react.useState)("");
-    const [pwd, setpwd] = (0, _react.useState)("");
-    const handleLoginFromSubmit = ()=>{
-        console.log("Submitting handle form");
-    };
-    const handleEmailChange = (e)=>{
-        const em = e.target.value;
-        setemail(em);
-    };
-    const handlepwdChange = (e)=>{
-        const em = e.target.value;
-        setpwd(em);
-    };
-    //   bg-gradient-to-r from-violet-500 to-fuchsia-500
+var _navbar = require("../components/Navbar");
+var _navbarDefault = parcelHelpers.interopDefault(_navbar);
+var _heroSection = require("../components/HeroSection");
+var _heroSectionDefault = parcelHelpers.interopDefault(_heroSection);
+const HomePage = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "container   bg-[url(https://d31l02nbp0owar.cloudfront.net/m/s/23209/23199454/a-0850.jpg)] bg-no-repeat bg-cover   w-full   px-4   h-full   grid   justify-center   items-center   ",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
-            className: "border-2 border-white px-4   py-4 grid gap-4",
-            onSubmit: handleLoginFromSubmit(),
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "email-container grid",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                            className: "text-[white]",
-                            children: "Email"
-                        }, void 0, false, {
-                            fileName: "src/pages/Loginpage.js",
-                            lineNumber: 36,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                            className: "bg-transparent border-2 border-black outline-0 text-[white] px-1",
-                            placeholder: "Enter email",
-                            value: email,
-                            type: "email",
-                            onChange: (e)=>handleEmailChange(e)
-                        }, void 0, false, {
-                            fileName: "src/pages/Loginpage.js",
-                            lineNumber: 37,
-                            columnNumber: 11
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/pages/Loginpage.js",
-                    lineNumber: 35,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "pwd-container grid",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                            className: "text-[white]",
-                            children: "Password"
-                        }, void 0, false, {
-                            fileName: "src/pages/Loginpage.js",
-                            lineNumber: 46,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                            className: "bg-transparent border-2 border-black outline-0 text-[white] px-1",
-                            placeholder: "Enter email",
-                            value: pwd,
-                            type: "password",
-                            onChange: (e)=>handlepwdChange(e)
-                        }, void 0, false, {
-                            fileName: "src/pages/Loginpage.js",
-                            lineNumber: 47,
-                            columnNumber: 11
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/pages/Loginpage.js",
-                    lineNumber: 45,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                    children: "Forget Password ?"
-                }, void 0, false, {
-                    fileName: "src/pages/Loginpage.js",
-                    lineNumber: 55,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                    type: "submit",
-                    className: "bg-gradient-to-r from-purple-500 to-pink-500 py-4 px-4 rounded  md:bg-gradient-to-l",
-                    children: "Login"
-                }, void 0, false, {
-                    fileName: "src/pages/Loginpage.js",
-                    lineNumber: 56,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/pages/Loginpage.js",
-            lineNumber: 30,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/pages/Loginpage.js",
-        lineNumber: 19,
+        className: "container",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navbarDefault.default), {}, void 0, false, {
+                fileName: "src/pages/HomePage.js",
+                lineNumber: 8,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _heroSectionDefault.default), {}, void 0, false, {
+                fileName: "src/pages/HomePage.js",
+                lineNumber: 9,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/pages/HomePage.js",
+        lineNumber: 7,
         columnNumber: 5
     }, undefined);
 };
-_s(Loginpage, "T66br9VcwijiBXepUj4qr31CmNs=");
-_c = Loginpage;
-exports.default = Loginpage;
+_c = HomePage;
+exports.default = HomePage;
 var _c;
-$RefreshReg$(_c, "Loginpage");
+$RefreshReg$(_c, "HomePage");
 
-  $parcel$ReactRefreshHelpers$50d7.postlude(module);
+  $parcel$ReactRefreshHelpers$52a6.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../components/Navbar":"5EEXV","../components/HeroSection":"2i443"}],"5EEXV":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8fbf = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8fbf.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _logoPng = require("../../public/images/logo.png");
+var _logoPngDefault = parcelHelpers.interopDefault(_logoPng);
+var _userPng = require("../../public/images/user.png");
+var _userPngDefault = parcelHelpers.interopDefault(_userPng);
+var _cartPng = require("../../public/images/cart.png");
+var _cartPngDefault = parcelHelpers.interopDefault(_cartPng);
+const Navbar = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "px-4 py-4 container bg-[grey] grid grid-flow-col items-center justify-between",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "logo-section grid grid-flow-col  items-center  gap-2 bg-[#49471f] py-2 px-4 rounded-full  hover:bg-[black] hover:cursor-pointer",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        width: 55,
+                        height: 75,
+                        src: (0, _logoPngDefault.default),
+                        alt: "Logo"
+                    }, void 0, false, {
+                        fileName: "src/components/Navbar.js",
+                        lineNumber: 10,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "logoText",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                className: "font-bold text-2xl text-white md:block",
+                                children: "Herbs"
+                            }, void 0, false, {
+                                fileName: "src/components/Navbar.js",
+                                lineNumber: 12,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                className: "font-semibold text-white text-xs hidden md:block",
+                                children: '"The Beauty Within You"'
+                            }, void 0, false, {
+                                fileName: "src/components/Navbar.js",
+                                lineNumber: 13,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Navbar.js",
+                        lineNumber: 11,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Navbar.js",
+                lineNumber: 9,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "navlinks-section",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                    className: "grid grid-flow-col gap-8 hidden md:grid ",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            className: "hover:font-semibold cursor-pointer",
+                            children: "HOME"
+                        }, void 0, false, {
+                            fileName: "src/components/Navbar.js",
+                            lineNumber: 21,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            className: "hover:font-semibold cursor-pointer",
+                            children: "PRODUCTS"
+                        }, void 0, false, {
+                            fileName: "src/components/Navbar.js",
+                            lineNumber: 22,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            className: "hover:font-semibold cursor-pointer",
+                            children: "HOW TO USE?"
+                        }, void 0, false, {
+                            fileName: "src/components/Navbar.js",
+                            lineNumber: 23,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            className: "hover:font-semibold cursor-pointer",
+                            children: "BLOGS"
+                        }, void 0, false, {
+                            fileName: "src/components/Navbar.js",
+                            lineNumber: 24,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            className: "hover:font-semibold cursor-pointer",
+                            children: "ABOUT US"
+                        }, void 0, false, {
+                            fileName: "src/components/Navbar.js",
+                            lineNumber: 25,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            className: "hover:font-semibold cursor-pointer",
+                            children: "CONTACT"
+                        }, void 0, false, {
+                            fileName: "src/components/Navbar.js",
+                            lineNumber: 26,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Navbar.js",
+                    lineNumber: 20,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/Navbar.js",
+                lineNumber: 19,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "user-section grid grid-flow-col gap-5",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                        className: "fas fa-user"
+                    }, void 0, false, {
+                        fileName: "src/components/Navbar.js",
+                        lineNumber: 30,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                        className: "fas fa-cart-plus"
+                    }, void 0, false, {
+                        fileName: "src/components/Navbar.js",
+                        lineNumber: 31,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Navbar.js",
+                lineNumber: 29,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "hamburgur-menu block md:hidden",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                        className: "fas fa-bars"
+                    }, void 0, false, {
+                        fileName: "src/components/Navbar.js",
+                        lineNumber: 34,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                        className: "fas fa-angle-right hidden"
+                    }, void 0, false, {
+                        fileName: "src/components/Navbar.js",
+                        lineNumber: 35,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Navbar.js",
+                lineNumber: 33,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Navbar.js",
+        lineNumber: 8,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Navbar;
+exports.default = Navbar;
+var _c;
+$RefreshReg$(_c, "Navbar");
+
+  $parcel$ReactRefreshHelpers$8fbf.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../public/images/logo.png":"bjXpD","../../public/images/user.png":"bc87j","../../public/images/cart.png":"dByJg"}],"bjXpD":[function(require,module,exports) {
+module.exports = require("cb409dae794af26a").getBundleURL("bLxZJ") + "logo.b5bfa736.png" + "?" + Date.now();
+
+},{"cb409dae794af26a":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+}
+// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"bc87j":[function(require,module,exports) {
+module.exports = require("40d7e08f713109cd").getBundleURL("bLxZJ") + "user.aa598df4.png" + "?" + Date.now();
+
+},{"40d7e08f713109cd":"lgJ39"}],"dByJg":[function(require,module,exports) {
+module.exports = require("76083bec00183c0f").getBundleURL("bLxZJ") + "cart.960944f1.png" + "?" + Date.now();
+
+},{"76083bec00183c0f":"lgJ39"}],"2i443":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5e97 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5e97.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+// use json method like mann for slider
+const HeroSection = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: "Heeromap"
+    }, void 0, false, {
+        fileName: "src/components/HeroSection.js",
+        lineNumber: 4,
+        columnNumber: 10
+    }, undefined);
+};
+_c = HeroSection;
+exports.default = HeroSection;
+var _c;
+$RefreshReg$(_c, "HeroSection");
+
+  $parcel$ReactRefreshHelpers$5e97.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
