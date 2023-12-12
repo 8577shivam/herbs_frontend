@@ -27783,13 +27783,15 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _sliderdata = require("../../data/sliderdata");
 // use json method like mann for slider
 const HeroSection = ()=>{
+    console.log((0, _sliderdata.SliderData));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: "Heeromap"
+        className: "container"
     }, void 0, false, {
         fileName: "src/components/HeroSection.js",
-        lineNumber: 4,
+        lineNumber: 7,
         columnNumber: 10
     }, undefined);
 };
@@ -27803,6 +27805,29 @@ $RefreshReg$(_c, "HeroSection");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["icZzK","1xC6H","8lqZg"], "8lqZg", "parcelRequire7531")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../data/sliderdata":"kUfpv"}],"kUfpv":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "SliderData", ()=>SliderData);
+const SliderData = [
+    {
+        id: "1",
+        subHeading: "Nourish with Nature",
+        Heading: "HERBS HEENA",
+        desc: "Experience the allure of Herbal Henna, a botanical marvel crafted for vibrant, luscious locks. Let nature's touch redefine your hair's radiance with each application.",
+        backgroundText: "Nature",
+        image: "../public/images/HeenaPouch.png"
+    },
+    {
+        id: "2",
+        subHeading: "Nourish with Nature",
+        Heading: "HERBS HEENA",
+        desc: "Experience the allure of Herbal Henna, a botanical marvel crafted for vibrant, luscious locks. Let nature's touch redefine your hair's radiance with each application.",
+        backgroundText: "Nature",
+        image: "../public/images/HeenaPouch.png"
+    }
+];
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["icZzK","1xC6H","8lqZg"], "8lqZg", "parcelRequire7531")
 
 //# sourceMappingURL=index.975ef6c8.js.map
