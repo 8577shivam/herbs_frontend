@@ -1,7 +1,12 @@
 import React from "react";
+import Loginpage from "./pages/Loginpage";
 
 const App = () => {
-  return <div>App</div>;
+  return (
+    <div className="container h-screen">
+      <Loginpage />
+    </div>
+  );
 };
 
 export default App;
