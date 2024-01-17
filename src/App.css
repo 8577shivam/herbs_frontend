@@ -1,0 +1,30 @@
+/* Define the @font-face rule for variable font */
+@font-face {
+  font-family: "Baloo Paaji 2";
+  src: url("../public/font/BalooPaaji2-VariableFont_wght.ttf")
+    format("truetype-variations");
+  font-weight: 1 1000;
+}
+
+/* Apply the variable font to different elements */
+body {
+  font-family: "Baloo Paaji 2", sans-serif;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: "Baloo Paaji 2", sans-serif;
+}
+
+/* Use static fonts as fallback for non-supporting browsers or applications */
+@supports not (font-variation-settings: normal) {
+  body {
+    font-family: "Baloo Paaji 2";
+  }
+
+  h1 {
+    font-family: "Baloo Paaji 2 Bold"; /* Use a static font for bold heading */
+    font-weight: 900;
+  }
+}

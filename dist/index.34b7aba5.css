@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Baloo Paaji 2";
+  src: url("BalooPaaji2-VariableFont_wght.28b34996.ttf") format("truetype-variations");
+  font-weight: 1 1000;
+}
+
+body {
+  font-family: "Baloo Paaji 2", sans-serif;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: "Baloo Paaji 2", sans-serif;
+}
+
+@supports not (font-variation-settings: normal) {
+  body {
+    font-family: "Baloo Paaji 2";
+  }
+
+  h1 {
+    font-family: "Baloo Paaji 2 Bold";
+    font-weight: 900;
+  }
+}
+
+/*# sourceMappingURL=index.34b7aba5.css.map */

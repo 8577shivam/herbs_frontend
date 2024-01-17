@@ -27165,6 +27165,7 @@ var _loginpage = require("./pages/Loginpage");
 var _loginpageDefault = parcelHelpers.interopDefault(_loginpage);
 var _homePage = require("./pages/HomePage");
 var _homePageDefault = parcelHelpers.interopDefault(_homePage);
+var _appCss = require("./App.css");
 const App = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "container h-screen",
@@ -27189,7 +27190,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./pages/Loginpage":"bfC6m","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./pages/HomePage":"379Z0"}],"bfC6m":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./pages/Loginpage":"bfC6m","./pages/HomePage":"379Z0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./App.css":"6n0o6"}],"bfC6m":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$50d7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27503,24 +27504,31 @@ var _navbar = require("../components/Navbar");
 var _navbarDefault = parcelHelpers.interopDefault(_navbar);
 var _heroSection = require("../components/HeroSection");
 var _heroSectionDefault = parcelHelpers.interopDefault(_heroSection);
+var _bestSellerSection = require("../components/BestSellerSection");
+var _bestSellerSectionDefault = parcelHelpers.interopDefault(_bestSellerSection);
 const HomePage = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "container",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navbarDefault.default), {}, void 0, false, {
                 fileName: "src/pages/HomePage.js",
-                lineNumber: 8,
+                lineNumber: 9,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _heroSectionDefault.default), {}, void 0, false, {
                 fileName: "src/pages/HomePage.js",
-                lineNumber: 9,
+                lineNumber: 10,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bestSellerSectionDefault.default), {}, void 0, false, {
+                fileName: "src/pages/HomePage.js",
+                lineNumber: 11,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/pages/HomePage.js",
-        lineNumber: 7,
+        lineNumber: 8,
         columnNumber: 5
     }, undefined);
 };
@@ -27534,7 +27542,7 @@ $RefreshReg$(_c, "HomePage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../components/Navbar":"5EEXV","../components/HeroSection":"2i443"}],"5EEXV":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/Navbar":"5EEXV","../components/HeroSection":"2i443","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../components/BestSellerSection":"2hUrt"}],"5EEXV":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$8fbf = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27727,7 +27735,7 @@ $RefreshReg$(_c, "Navbar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../public/images/logo.png":"bjXpD","../../public/images/user.png":"bc87j","../../public/images/cart.png":"dByJg"}],"bjXpD":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../public/images/logo.png":"bjXpD","../../public/images/user.png":"bc87j","../../public/images/cart.png":"dByJg","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bjXpD":[function(require,module,exports) {
 module.exports = require("cb409dae794af26a").getBundleURL("bLxZJ") + "logo.b5bfa736.png" + "?" + Date.now();
 
 },{"cb409dae794af26a":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -27783,18 +27791,104 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _sliderdata = require("../../data/sliderdata");
-// use json method like mann for slider
+var _sliderdata = require("../data/sliderdata");
+var _s = $RefreshSig$();
+// import "../Stlyles/Slider.css";
 const HeroSection = ()=>{
-    console.log((0, _sliderdata.SliderData));
+    _s();
+    const [currentIndex, setcurrentIndex] = (0, _react.useState)(0);
+    // useEffect(() => {
+    //   const intervalSet = setInterval(() => {
+    //     setcurrentIndex((prevIndex) =>
+    //       prevIndex === SliderData.length - 1 ? 0 : prevIndex + 1
+    //     );
+    //   }, 7000);
+    //   // Clear the interval on component unmount
+    //   return () => clearInterval(intervalSet);
+    // }, [currentIndex]);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "container"
+        className: "slider-container  grid grid-flow-col",
+        children: (0, _sliderdata.SliderData).map((slide, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: `slider-slide grid grid-flow-col py-[16px] relative ${index === currentIndex ? "active" : "hidden"} `,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "leftside w-[90%] grid content-center gap-y-[3px] justify-self-center",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                className: "text-[18px]",
+                                children: slide.subHeading
+                            }, void 0, false, {
+                                fileName: "src/components/HeroSection.js",
+                                lineNumber: 28,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                className: "text-2xl  font-bold",
+                                children: slide.Heading
+                            }, void 0, false, {
+                                fileName: "src/components/HeroSection.js",
+                                lineNumber: 29,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "text-[12px] leading-[15px]",
+                                children: slide.desc
+                            }, void 0, false, {
+                                fileName: "src/components/HeroSection.js",
+                                lineNumber: 30,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: "mt-[4px] grid justify-self-start bg-indigo-500 text-white px-3 py-2 rounded-lg  hover:bg-violet-800",
+                                children: "BUY NOW"
+                            }, void 0, false, {
+                                fileName: "src/components/HeroSection.js",
+                                lineNumber: 31,
+                                columnNumber: 13
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                className: "text-7xl  font-bold    absolute text-indigo-300 bottom-0 translate-y-[20px] left-0 z-[-100]    opacity-25",
+                                children: slide.bgText
+                            }, void 0, false, {
+                                fileName: "src/components/HeroSection.js",
+                                lineNumber: 34,
+                                columnNumber: 13
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/HeroSection.js",
+                        lineNumber: 27,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "rightside pr-3",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            width: "100%",
+                            src: slide.image,
+                            alt: `Slider ${index + 1}`
+                        }, void 0, false, {
+                            fileName: "src/components/HeroSection.js",
+                            lineNumber: 43,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/HeroSection.js",
+                        lineNumber: 42,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, slide.id, true, {
+                fileName: "src/components/HeroSection.js",
+                lineNumber: 21,
+                columnNumber: 9
+            }, undefined))
     }, void 0, false, {
         fileName: "src/components/HeroSection.js",
-        lineNumber: 7,
-        columnNumber: 10
+        lineNumber: 19,
+        columnNumber: 5
     }, undefined);
 };
+_s(HeroSection, "YvRkeJmXI22VqVSKcvJYt3VP3G8=");
 _c = HeroSection;
 exports.default = HeroSection;
 var _c;
@@ -27805,10 +27899,14 @@ $RefreshReg$(_c, "HeroSection");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../data/sliderdata":"kUfpv"}],"kUfpv":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../data/sliderdata":"lX3GV","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lX3GV":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "SliderData", ()=>SliderData);
+var _heenapouchPng = require("../../public/images/Heenapouch.png");
+var _heenapouchPngDefault = parcelHelpers.interopDefault(_heenapouchPng);
+var _heenaPng = require("../../public/images/Heena.png");
+var _heenaPngDefault = parcelHelpers.interopDefault(_heenaPng);
 const SliderData = [
     {
         id: "1",
@@ -27816,7 +27914,8 @@ const SliderData = [
         Heading: "HERBS HEENA",
         desc: "Experience the allure of Herbal Henna, a botanical marvel crafted for vibrant, luscious locks. Let nature's touch redefine your hair's radiance with each application.",
         backgroundText: "Nature",
-        image: "../public/images/HeenaPouch.png"
+        image: (0, _heenapouchPngDefault.default),
+        bgText: "Nature"
     },
     {
         id: "2",
@@ -27824,10 +27923,101 @@ const SliderData = [
         Heading: "HERBS HEENA",
         desc: "Experience the allure of Herbal Henna, a botanical marvel crafted for vibrant, luscious locks. Let nature's touch redefine your hair's radiance with each application.",
         backgroundText: "Nature",
-        image: "../public/images/HeenaPouch.png"
+        image: (0, _heenaPngDefault.default),
+        bgText: "Nature"
     }
 ];
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["icZzK","1xC6H","8lqZg"], "8lqZg", "parcelRequire7531")
+},{"../../public/images/Heenapouch.png":"3GCmm","../../public/images/Heena.png":"hGaWk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3GCmm":[function(require,module,exports) {
+module.exports = require("36d96fc53f100675").getBundleURL("bLxZJ") + "Heenapouch.dd369a6b.png" + "?" + Date.now();
+
+},{"36d96fc53f100675":"lgJ39"}],"hGaWk":[function(require,module,exports) {
+module.exports = require("dec453637b8639bf").getBundleURL("bLxZJ") + "Heena.cb378e3a.png" + "?" + Date.now();
+
+},{"dec453637b8639bf":"lgJ39"}],"2hUrt":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$3b69 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3b69.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _bestsellerdata = require("../data/Bestsellerdata");
+const BestSellerSection = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "grid px-2",
+        children: (0, _bestsellerdata.BestSellerSectiondata).map((item, index)=>{
+            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: `flex ${item.id % 2 !== 1 ? "flex-row-reverse" : "flex-row"} justify-between`,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "left",
+                        children: [
+                            "Left ",
+                            item.id
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/BestSellerSection.js",
+                        lineNumber: 15,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "right",
+                        children: "Right Section"
+                    }, void 0, false, {
+                        fileName: "src/components/BestSellerSection.js",
+                        lineNumber: 16,
+                        columnNumber: 13
+                    }, undefined)
+                ]
+            }, item.id, true, {
+                fileName: "src/components/BestSellerSection.js",
+                lineNumber: 9,
+                columnNumber: 11
+            }, undefined);
+        })
+    }, void 0, false, {
+        fileName: "src/components/BestSellerSection.js",
+        lineNumber: 6,
+        columnNumber: 5
+    }, undefined);
+};
+_c = BestSellerSection;
+exports.default = BestSellerSection; // bestseller section must be like a card of buying .....leftside ->img...rightside->price..desc..review
+ // and the whole parent div of the cards must be scrollable in fixed screen...
+var _c;
+$RefreshReg$(_c, "BestSellerSection");
+
+  $parcel$ReactRefreshHelpers$3b69.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../data/Bestsellerdata":"1bREJ"}],"1bREJ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "BestSellerSectiondata", ()=>BestSellerSectiondata);
+const BestSellerSectiondata = [
+    {
+        id: 1,
+        img: "kasb",
+        title: "HERBS HEENA POWDER",
+        desc: "Crafted with care, our herbal henna is a blend of nourishing ingredients like Amla, Reetha, Shikakai, and Bhringraj. Experience the beauty of nature without compromise \u2013 our formula is proudly ammonia-free for vibrant, healthy hair. READ MORE...",
+        bgImg: "cv,v"
+    },
+    {
+        id: 2,
+        img: "kasb",
+        title: "HERBS  HAIR OIL",
+        desc: "Crafted with care, our herbal henna is a blend of nourishing ingredients like Amla, Reetha, Shikakai, and Bhringraj. Experience the beauty of nature without compromise \u2013 our formula is proudly ammonia-free for vibrant, healthy hair. READ MORE...",
+        bgImg: "cv,v"
+    }
+];
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6n0o6":[function() {},{}]},["icZzK","1xC6H","8lqZg"], "8lqZg", "parcelRequire7531")
 
 //# sourceMappingURL=index.975ef6c8.js.map
